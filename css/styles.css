@@ -1,0 +1,171 @@
+/* ===== Fonts ===== */
+@font-face {
+  font-family: "Open Sauce One";
+  src: url("../fonts/opensauceone-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ===== Brand tokens ===== */
+:root {
+  --st-yellow: #FFCC40;
+  --st-cream: #EFE3CE;
+  --st-orange: #D45800;
+  --st-brown: #5E2A1E; /* REPLACE with real hex from Figma */
+  --st-black: #000000;
+
+  --font-heading: "Open Sauce One", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+  --font-accent: "Libre Baskerville", Georgia, serif;
+
+  --st-border: 3px solid var(--st-black);
+}
+
+/* ===== Base ===== */
+body {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 4.5vw, 2.5rem); }
+
+.accent-text {
+  font-family: var(--font-accent);
+}
+
+a {
+  color: var(--st-orange);
+}
+
+/* ===== Background helpers ===== */
+.bg-st-yellow { background-color: var(--st-yellow); }
+.bg-st-orange { background-color: var(--st-orange); color: var(--st-cream); }
+.bg-st-brown  { background-color: var(--st-brown);  color: var(--st-cream); }
+.bg-st-black  { background-color: var(--st-black);  color: var(--st-cream); }
+
+/* Bordered boxes, matches the brand kit look */
+.st-box {
+  border: var(--st-border);
+  padding: 1.5rem;
+}
+
+/* ===== Buttons with folded corner ===== */
+.btn-st-primary,
+.btn-st-secondary {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  padding: 0.6rem 2.75rem 0.6rem 1.5rem;
+  border: var(--st-border);
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+  transition: transform 0.15s ease;
+}
+
+.btn-st-primary::after,
+.btn-st-secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(225deg, transparent 50%, var(--st-cream) 50%);
+}
+
+.btn-st-primary {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-st-secondary {
+  background-color: var(--st-orange);
+  color: var(--st-black);
+}
+
+.btn-st-primary:hover,
+.btn-st-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: var(--st-orange);
+  border-bottom: var(--st-border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  background-color: var(#D45800);
+  border: var(--st-border);
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar .nav-link {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  color: var(--st-black);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.75rem;
+  margin-left: 1rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+}
+
+.navbar-toggler {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .nav-link {
+    margin: 0.75rem 0 0;
+    text-align: center;
+  }
+}
+/* ===== Forms ===== */
+.form-control {
+  font-family: var(--font-body);
+  border: var(--st-border);
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--st-orange);
+  box-shadow: 0 0 0 3px rgba(212, 88, 0, 0.3);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  font-size: 0.8rem;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: var(--st-orange);
+}
