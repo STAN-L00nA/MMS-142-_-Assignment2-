@@ -27,7 +27,7 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#shop">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -37,11 +37,70 @@
   </nav>
 
   <!-- PAGE CONTENT GOES HERE -->
-  <main class="container py-5">
-    <h1>Template works</h1>
-    <p>If this text is monospace and the heading is bold and rounded, everything is linked correctly.</p>
-  </main>
+ <main>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Simple T-Shirts for Everyday Life</h1>
+      <a href="#shop" class="btn btn-st-shop mt-3">Shop Now!</a>
+    </div>
+  </section>
+
+  <!-- AVAILABLE NOW -->
+  <section id="shop" class="home-section section-divider">
+    <div class="container">
+      <h2 class="mb-4">Available Now!</h2>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-dont-be-late.png" alt="Black Don't Be Late tee with clock graphic">
+            <a href="shirt1.html" class="product-name">Don't Be Late</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt1.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-everyday-comfort.png" alt="Black Everyday Comfort tee with purple floral graphic">
+            <a href="shirt2.html" class="product-name">Everyday Comfort</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt2.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-do-good-work.png" alt="Black Do Good Work tee with pink speech bubble graphic">
+            <a href="shirt3.html" class="product-name">Do Good Work</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt3.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT US -->
+  <section id="about" class="home-section">
+    <div class="container">
+      <h2 class="mb-4">About Us</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-4">
+          <img src="images/about.jpg" class="img-fluid about-img" alt="The SimplyTee team working together at a table">
+        </div>
+        <div class="col-12 col-md-8">
+          <p><strong>SimplyTee</strong> was founded at the University of the Philippines by students, for students, with one goal: making simple and comfortable t-shirts.</p>
+          <p>Our first release focuses on our simple mantra of providing "Everyday Comfort" while "Do(ing) Good Work." We hope our products will accompany you, wishing that you "Don't Be Late" for anything.</p>
+          <p>We are simply, <strong>SimplyTee</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
   <!-- FOOTER: same on every page -->
   <footer>
     <div class="container">

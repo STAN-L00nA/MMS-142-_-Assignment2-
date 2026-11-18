@@ -107,7 +107,7 @@ a {
 }
 
 .navbar-brand {
-  background-color: var(#D45800);
+  background-color: var(--st-yellow);
   border: var(--st-border);
   padding: 0.25rem 0.75rem;
 }
@@ -168,4 +168,76 @@ footer {
 
 footer a {
   color: var(--st-orange);
+}
+/* ===== Homepage ===== */
+.hero {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 65%),
+    url("../images/hero.jpg") center / cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--st-border);
+}
+
+.hero h1 {
+  color: #fff;
+  max-width: 16ch;
+}
+
+.btn-st-shop {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.6rem 3rem;
+}
+
+.btn-st-shop:hover {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  border: var(--st-border);
+}
+
+.home-section {
+  padding: 3rem 0;
+}
+
+.section-divider {
+  border-bottom: var(--st-border);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  margin-bottom: 0.75rem;
+}
+
+.product-name {
+  display: block;
+  color: var(--st-black);
+  font-size: 1.15rem;
+  text-decoration: underline;
+}
+
+.product-price {
+  font-family: var(--font-accent);
+  margin-bottom: 0.5rem;
+}
+
+.view-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.about-img {
+  border: var(--st-border);
 }
