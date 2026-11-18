@@ -241,3 +241,74 @@ footer a {
 .about-img {
   border: var(--st-border);
 }
+/* ===== Product pages ===== */
+.product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+}
+
+.st-select {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  max-width: 280px;
+}
+
+.st-qty {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  width: 110px;
+}
+
+.btn-st-order {
+  background-color: var(--st-orange);
+  color: var(--st-black);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 2.5rem;
+}
+
+.btn-st-order:hover {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  border: var(--st-border);
+}
+
+.order-feedback {
+  min-height: 1.5rem;
+  font-weight: 700;
+}
+
+.section-label {
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Contact page ===== */
+.contact-img {
+  border: var(--st-border);
+}
+
+.contact-info a {
+  color: var(--st-black);
+}
+
+/* ===== Privacy and Terms ===== */
+.legal-page {
+  max-width: 80ch;
+}
+
+.last-updated {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
