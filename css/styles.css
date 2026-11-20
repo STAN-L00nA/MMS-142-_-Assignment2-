@@ -11,14 +11,14 @@
   --st-yellow: #FFCC40;
   --st-cream: #EFE3CE;
   --st-orange: #D45800;
-  --st-brown: #5E2A1E; /* REPLACE with real hex from Figma */
+  --st-brown: #6D281C; 
   --st-black: #000000;
 
   --font-heading: "Open Sauce One", "Helvetica Neue", Arial, sans-serif;
   --font-body: "JetBrains Mono", monospace;
   --font-accent: "Libre Baskerville", Georgia, serif;
 
-  --st-border: 3px solid var(--st-black);
+  --st-border: 4px solid var(--st-black);
 }
 
 /* ===== Base ===== */
@@ -26,6 +26,7 @@ body {
   background-color: var(--st-cream);
   color: var(--st-black);
   font-family: var(--font-body);
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -92,6 +93,7 @@ a {
 .btn-st-secondary {
   background-color: var(--st-orange);
   color: var(--st-black);
+  font-weight: 700;
 }
 
 .btn-st-primary:hover,
@@ -122,6 +124,7 @@ a {
   color: var(--st-black);
   font-family: var(--font-body);
   font-weight: 700;
+  font-size: 1.50rem;
   text-transform: uppercase;
   padding: 0.2rem 0.75rem;
   margin-left: 1rem;
@@ -129,7 +132,7 @@ a {
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  background-color: var(--st-cream);
+  background-color: var(--st-orange);
   color: var(--st-black);
 }
 
@@ -191,7 +194,8 @@ footer a {
   border: var(--st-border);
   border-radius: 0;
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.50rem;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 0.6rem 3rem;
 }
@@ -222,7 +226,7 @@ footer a {
 .product-name {
   display: block;
   color: var(--st-black);
-  font-size: 1.15rem;
+  font-size: 1.50rem;
   text-decoration: underline;
 }
 
