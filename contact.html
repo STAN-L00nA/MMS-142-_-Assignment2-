@@ -7,6 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/mailto.js" defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,23 +40,64 @@
   <main>
     <section class="home-section">
       <div class="container">
-        <h1 class="h2 mb-3">Contact Us</h1>
-        <p class="mb-4">Have any problems with your order, questions, or suggestions?</p>
+        <h1 class="h1 mb-3">Contact Us</h1>
+        <p class="mb-4">Have any problems with your order, questions, or suggestions? Fill in this form and we will reply by email.</p>
 
-        <div class="row g-4 align-items-center">
+        <form id="contact-form" class="contact-form" action="#" method="post" enctype="text/plain">
+        <div class="form-group mt-3">
+          <label for="full-name"><strong>Full name</strong> <span class="required">(required)</span></label>
+          <p>
+          <input type="text" id="full-name" name="full_name" class="st-select" required autocomplete="name">
+          </p>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="email"><strong>Email address</strong> <span class="required">(required)</span></label>
+          <p>
+          <input type="email" id="email" name="email" class="st-select" required autocomplete="email">
+          </p>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="topic"><strong>Topic</strong> <span class="required">(required)</span></label>
+          <p>
+          <select id="topic" name="topic" class="st-select" required>
+            <option value="">Choose a topic</option>
+            <option value="order">A problem about an order</option>
+            <option value="product">A question about a product</option>
+            <option value="product">A suggestion</option>
+            <option value="other">Something else</option>
+          </select>
+          </p>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="message"><strong>Message</strong> <span class="required">(required)</span></label>
+          <p id="message-hint" class="hint">Please do not include passwords or payment details.</p>
+          <textarea id="message" name="message" rows="6" cols="40" class="st-message" placeholder="Type your message here..." required aria-describedby="message-hint"></textarea>
+        </div>
+
+        <button class="btn-st-shop mt-3" type="submit">Send message</button>
+
+        <p id="form-message" role="status"></p>
+      </form>
+
+        <div class="row g-4 align-items-center mt-5">
           <div class="col-12 col-md-4">
             <img src="images/contact.png" class="img-fluid contact-img" alt="Person holding a phone next to a laptop">
           </div>
           <div class="col-12 col-md-8 contact-info">
+            <p class="mb-2">Here are other ways to reach us!</p>
             <p class="mb-2">Email us at:</p>
-            <p class="mb-2"><a href="mailto:simplytee.mgmt@gmail.com">simplytee.mgmt@gmail.com</a></p>
+            <p class="mb-2"><a href="mailto:orders@examplewebsite142.com">orders@examplewebsite142.com</a></p>
             <p class="mb-2">or text/call <a href="tel:+639000000000">0900 000 0000</a></p>
-            <p class="mb-0">and we'll simply do our best!</p>
           </div>
         </div>
       </div>
     </section>
+    
   </main>
+
 
   <!-- FOOTER: same on every page -->
   <footer>
