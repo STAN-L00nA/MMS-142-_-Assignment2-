@@ -1,0 +1,714 @@
+.
+./README.md
+./allcode.txt
+./contact.html
+./css
+./css/styles.css
+./fonts
+./fonts/opensauceone-bold.ttf
+./images
+./images/.gitkeep
+./images/about.png
+./images/contact.png
+./images/home-about.jpg
+./images/home-heroimage.png
+./images/shirt-do-good-work.png
+./images/shirt-dont-be-late.png
+./images/shirt-everyday-comfort.png
+./images/tee-dogoodwork.jpg
+./images/tee-dontbelate.png
+./images/tee-everydaycomfort.jpg
+./index.html
+./js
+./js/script.js
+./privacy.html
+./terms.html
+===== ./contact.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SimplyTee</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR: same on every page -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo-color.svg" alt="SimplyTee">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="home-section">
+      <div class="container">
+        <h1 class="h2 mb-3">Contact Us</h1>
+        <p class="mb-4">Have any problems with your order, questions, or suggestions?</p>
+
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-4">
+            <img src="images/contact.png" class="img-fluid contact-img" alt="Person holding a phone next to a laptop">
+          </div>
+          <div class="col-12 col-md-8 contact-info">
+            <p class="mb-2">Email us at:</p>
+            <p class="mb-2"><a href="mailto:simplytee.mgmt@gmail.com">simplytee.mgmt@gmail.com</a></p>
+            <p class="mb-2">or text/call <a href="tel:+639000000000">0900 000 0000</a></p>
+            <p class="mb-0">and we'll simply do our best!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: same on every page -->
+  <footer>
+    <div class="container">
+      SimplyTee · © 2026 · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+===== ./css/styles.css =====
+/* ===== Fonts ===== */
+@font-face {
+  font-family: "Open Sauce One";
+  src: url("../fonts/opensauceone-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ===== Brand tokens ===== */
+:root {
+  --st-yellow: #FFCC40;
+  --st-cream: #EFE3CE;
+  --st-orange: #D45800;
+  --st-brown: #5E2A1E; /* REPLACE with real hex from Figma */
+  --st-black: #000000;
+
+  --font-heading: "Open Sauce One", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+  --font-accent: "Libre Baskerville", Georgia, serif;
+
+  --st-border: 3px solid var(--st-black);
+}
+
+/* ===== Base ===== */
+body {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 4.5vw, 2.5rem); }
+
+.accent-text {
+  font-family: var(--font-accent);
+}
+
+a {
+  color: var(--st-orange);
+}
+
+/* ===== Background helpers ===== */
+.bg-st-yellow { background-color: var(--st-yellow); }
+.bg-st-orange { background-color: var(--st-orange); color: var(--st-cream); }
+.bg-st-brown  { background-color: var(--st-brown);  color: var(--st-cream); }
+.bg-st-black  { background-color: var(--st-black);  color: var(--st-cream); }
+
+/* Bordered boxes, matches the brand kit look */
+.st-box {
+  border: var(--st-border);
+  padding: 1.5rem;
+}
+
+/* ===== Buttons with folded corner ===== */
+.btn-st-primary,
+.btn-st-secondary {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  padding: 0.6rem 2.75rem 0.6rem 1.5rem;
+  border: var(--st-border);
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+  transition: transform 0.15s ease;
+}
+
+.btn-st-primary::after,
+.btn-st-secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(225deg, transparent 50%, var(--st-cream) 50%);
+}
+
+.btn-st-primary {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-st-secondary {
+  background-color: var(--st-orange);
+  color: var(--st-black);
+}
+
+.btn-st-primary:hover,
+.btn-st-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: var(--st-orange);
+  border-bottom: var(--st-border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar .nav-link {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  color: var(--st-black);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.75rem;
+  margin-left: 1rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+}
+
+.navbar-toggler {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .nav-link {
+    margin: 0.75rem 0 0;
+    text-align: center;
+  }
+}
+/* ===== Forms ===== */
+.form-control {
+  font-family: var(--font-body);
+  border: var(--st-border);
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--st-orange);
+  box-shadow: 0 0 0 3px rgba(212, 88, 0, 0.3);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  font-size: 0.8rem;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: var(--st-orange);
+}
+/* ===== Homepage ===== */
+.hero {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 65%),
+    url("../images/hero.jpg") center / cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--st-border);
+}
+
+.hero h1 {
+  color: #fff;
+  max-width: 16ch;
+}
+
+.btn-st-shop {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.6rem 3rem;
+}
+
+.btn-st-shop:hover {
+  background-color: var(--st-cream);
+  color: var(--st-black);
+  border: var(--st-border);
+}
+
+.home-section {
+  padding: 3rem 0;
+}
+
+.section-divider {
+  border-bottom: var(--st-border);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  margin-bottom: 0.75rem;
+}
+
+.product-name {
+  display: block;
+  color: var(--st-black);
+  font-size: 1.15rem;
+  text-decoration: underline;
+}
+
+.product-price {
+  font-family: var(--font-accent);
+  margin-bottom: 0.5rem;
+}
+
+.view-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.about-img {
+  border: var(--st-border);
+}
+/* ===== Product pages ===== */
+.product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+}
+
+.st-select {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  max-width: 280px;
+}
+
+.st-qty {
+  background-color: var(--st-yellow);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  width: 110px;
+}
+
+.btn-st-order {
+  background-color: var(--st-orange);
+  color: var(--st-black);
+  border: var(--st-border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 2.5rem;
+}
+
+.btn-st-order:hover {
+  background-color: var(--st-yellow);
+  color: var(--st-black);
+  border: var(--st-border);
+}
+
+.order-feedback {
+  min-height: 1.5rem;
+  font-weight: 700;
+}
+
+.section-label {
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Contact page ===== */
+.contact-img {
+  border: var(--st-border);
+}
+
+.contact-info a {
+  color: var(--st-black);
+}
+
+/* ===== Privacy and Terms ===== */
+.legal-page {
+  max-width: 80ch;
+}
+
+.last-updated {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+===== ./index.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplyTee | Simple T-Shirts for Everyday Life</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR: same on every page -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo-color.svg" alt="SimplyTee">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT GOES HERE -->
+ <main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Simple T-Shirts for Everyday Life</h1>
+      <a href="#shop" class="btn btn-st-shop mt-3">Shop Now!</a>
+    </div>
+  </section>
+
+  <!-- AVAILABLE NOW -->
+  <section id="shop" class="home-section section-divider">
+    <div class="container">
+      <h2 class="mb-4">Available Now!</h2>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-dont-be-late.png" alt="Black Don't Be Late tee with clock graphic">
+            <a href="shirt1.html" class="product-name">Don't Be Late</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt1.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-everyday-comfort.png" alt="Black Everyday Comfort tee with purple floral graphic">
+            <a href="shirt2.html" class="product-name">Everyday Comfort</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt2.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="product-card">
+            <img src="images/shirt-do-good-work.png" alt="Black Do Good Work tee with pink speech bubble graphic">
+            <a href="shirt3.html" class="product-name">Do Good Work</a>
+            <p class="product-price">₱499</p>
+            <a href="shirt3.html" class="view-link">view →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT US -->
+  <section id="about" class="home-section">
+    <div class="container">
+      <h2 class="mb-4">About Us</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-4">
+          <img src="images/about.png" class="img-fluid about-img" alt="The SimplyTee team working together at a table">
+        </div>
+        <div class="col-12 col-md-8">
+          <p><strong>SimplyTee</strong> was founded at the University of the Philippines by students, for students, with one goal: making simple and comfortable t-shirts.</p>
+          <p>Our first release focuses on our simple mantra of providing "Everyday Comfort" while "Do(ing) Good Work." We hope our products will accompany you, wishing that you "Don't Be Late" for anything.</p>
+          <p>We are simply, <strong>SimplyTee</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+  <!-- FOOTER: same on every page -->
+  <footer>
+    <div class="container">
+      SimplyTee · © 2026 · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+===== ./js/script.js =====
+
+===== ./privacy.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | SimplyTee</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR: same on every page -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo-color.svg" alt="SimplyTee">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="home-section">
+      <div class="container legal-page">
+        <h1 class="h2 mb-1">Privacy Policy</h1>
+        <p class="last-updated">Last Updated: Oct. 14, 2026</p>
+
+        <p>This Privacy Policy for SimplyTee ("we," "us," or "our") describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:</p>
+        <ul>
+          <li>Visit our website at <a href="https://www.simplytee.com">https://www.simplytee.com</a> or any website of ours that links to this Privacy Policy</li>
+          <li>Use SimplyTee, a store for simple and comfortable t-shirts</li>
+          <li>Engage with us in other related ways, including any marketing or events</li>
+        </ul>
+        <p>Questions or concerns? Reading this Privacy Policy will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:simplytee.mgmt@gmail.com">simplytee.mgmt@gmail.com</a>.</p>
+
+        <h2 class="h5 mt-4">1. What information we collect</h2>
+        <p>We only collect information you give us when you place an order or contact us. This includes your name, email address, phone number, and delivery address, plus the details of your order such as shirt, size, color, and quantity.</p>
+
+        <h2 class="h5 mt-4">2. How we use your information</h2>
+        <ul>
+          <li>To process, confirm, and deliver your order</li>
+          <li>To reply to your questions, concerns, or suggestions</li>
+          <li>To send you updates about new releases, only if you agree to receive them</li>
+        </ul>
+
+        <h2 class="h5 mt-4">3. Who we share it with</h2>
+        <p>We do not sell your personal information. We only share what is needed with the courier delivering your order and the payment service you choose to pay with.</p>
+
+        <h2 class="h5 mt-4">4. Third party services on this website</h2>
+        <p>This website loads fonts from Google Fonts and page components from jsDelivr. When your browser loads these, those services may receive your IP address. We do not use tracking or advertising cookies.</p>
+
+        <h2 class="h5 mt-4">5. How long we keep it</h2>
+        <p>We keep your information only as long as needed to complete your order and handle any returns or concerns, unless the law requires us to keep it longer.</p>
+
+        <h2 class="h5 mt-4">6. Your rights</h2>
+        <p>Under the Data Privacy Act of 2012 (Republic Act No. 10173), you have the right to be informed, to access, to correct, to object, to have your data erased or blocked, and to file a complaint with the National Privacy Commission. To exercise any of these rights, email us at <a href="mailto:simplytee.mgmt@gmail.com">simplytee.mgmt@gmail.com</a>.</p>
+
+        <h2 class="h5 mt-4">7. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. The "Last Updated" date at the top of this page shows when it was last changed.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: same on every page -->
+  <footer>
+    <div class="container">
+      SimplyTee · © 2026 · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+===== ./terms.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | SimplyTee</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR: same on every page -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo-color.svg" alt="SimplyTee">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="home-section">
+      <div class="container legal-page">
+        <h1 class="h2 mb-1">Terms and Conditions</h1>
+        <p class="last-updated">Last Updated: Oct. 14, 2026</p>
+
+        <p>These Terms and Conditions for SimplyTee ("we," "us," or "our") govern your use of our services ("Services"), including when you:</p>
+        <ul>
+          <li>Visit our website at <a href="https://www.simplytee.com">https://www.simplytee.com</a> or any website of ours that links to these Terms and Conditions</li>
+          <li>Shop at SimplyTee, a store for simple and comfortable t-shirts</li>
+          <li>Engage with us in other related ways, including any marketing or events</li>
+        </ul>
+        <p>By using our Services, you agree to these Terms. If you do not agree, please do not use our Services. For how we handle your personal information, see our <a href="privacy.html">Privacy Policy</a>. If you have any questions, contact us at <a href="mailto:simplytee.mgmt@gmail.com">simplytee.mgmt@gmail.com</a>.</p>
+
+        <h2 class="h5 mt-4">1. Orders</h2>
+        <p>An order is confirmed only after we send you a confirmation by email or message. We may cancel an order if an item is out of stock, if there is an error in pricing, or if we cannot verify your details. If we cancel after you have paid, we will refund you in full.</p>
+
+        <h2 class="h5 mt-4">2. Prices and payment</h2>
+        <p>All prices are in Philippine Pesos (PHP). Prices may change without notice, but the price shown when you place your order is the price you pay. Payment must be completed before we ship your order.</p>
+
+        <h2 class="h5 mt-4">3. Shipping</h2>
+        <p>We ship within the Philippines through third party couriers. Delivery times are estimates and may be delayed by weather, holidays, or courier issues outside our control. Please make sure your delivery address and contact number are correct.</p>
+
+        <h2 class="h5 mt-4">4. Returns and exchanges</h2>
+        <p>If your shirt arrives damaged, defective, or different from what you ordered, contact us within 7 days of delivery with your order details and a photo. We will replace it or refund you. Items must be unworn, unwashed, and with tags attached. We do not accept returns for change of mind, but we are happy to help with a size exchange if stock allows.</p>
+
+        <h2 class="h5 mt-4">5. Product details</h2>
+        <p>We do our best to show our shirts accurately, but colors may look slightly different depending on your screen. Please check our size guide before ordering.</p>
+
+        <h2 class="h5 mt-4">6. Intellectual property</h2>
+        <p>All designs, images, logos, and text on this website belong to SimplyTee. You may not copy, reproduce, or sell them without our written permission.</p>
+
+        <h2 class="h5 mt-4">7. Limitation of liability</h2>
+        <p>To the extent allowed by law, SimplyTee is not liable for indirect or incidental damages from using our website or products. Nothing in these Terms limits your rights under the Consumer Act of the Philippines (Republic Act No. 7394).</p>
+
+        <h2 class="h5 mt-4">8. Governing law</h2>
+        <p>These Terms are governed by the laws of the Republic of the Philippines.</p>
+
+        <h2 class="h5 mt-4">9. Changes to these Terms</h2>
+        <p>We may update these Terms from time to time. The "Last Updated" date at the top of this page shows when they were last changed.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: same on every page -->
+  <footer>
+    <div class="container">
+      SimplyTee · © 2026 · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
