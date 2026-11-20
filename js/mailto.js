@@ -1,4 +1,4 @@
-const TO_ADDRESS = "orders@examplewebsite142.com";
+const TO_ADDRESS = "hello@examplewebsite142.com";
 const form = document.querySelector("#contact-form");
 
 function buildMailto() {
@@ -19,4 +19,6 @@ function buildMailto() {
 form.addEventListener("submit", function (event) {
     event.preventDefault(); 
     window.location.href = buildMailto();
+    document.querySelector("#form-feedback").textContent =
+        "Opening your email app. If nothing opens, email us at " + TO_ADDRESS + ".";
 });
