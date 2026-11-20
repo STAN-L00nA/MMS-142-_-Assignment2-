@@ -6,6 +6,7 @@
   font-display: swap;
 }
 
+
 /* ===== Brand tokens ===== */
 :root {
   --st-yellow: #FFCC40;
@@ -20,6 +21,7 @@
 
   --st-border: 4px solid var(--st-black);
 }
+
 
 /* ===== Base ===== */
 body {
@@ -36,6 +38,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   line-height: 1.15;
 }
 
+
 h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
 h2 { font-size: clamp(1.6rem, 4.5vw, 2.5rem); }
 
@@ -47,17 +50,20 @@ a {
   color: var(--st-orange);
 }
 
+
 /* ===== Background helpers ===== */
 .bg-st-yellow { background-color: var(--st-yellow); }
 .bg-st-orange { background-color: var(--st-orange); color: var(--st-cream); }
 .bg-st-brown  { background-color: var(--st-brown);  color: var(--st-cream); }
 .bg-st-black  { background-color: var(--st-black);  color: var(--st-cream); }
 
+
 /* Bordered boxes, matches the brand kit look */
 .st-box {
   border: var(--st-border);
   padding: 1.5rem;
 }
+
 
 /* ===== Buttons with folded corner ===== */
 .btn-st-primary,
@@ -100,6 +106,7 @@ a {
 .btn-st-secondary:hover {
   transform: translateY(-2px);
 }
+
 
 /* ===== Navbar ===== */
 .navbar {
@@ -245,7 +252,9 @@ footer a {
 .about-img {
   border: var(--st-border);
 }
-/* ===== Product pages ===== */
+
+
+/* ===== Solo Product Pages ===== */
 .product-img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -258,17 +267,21 @@ footer a {
   background-color: var(--st-yellow);
   border: var(--st-border);
   border-radius: 0;
+  padding: 0.2rem 0.5rem;
   font-family: var(--font-body);
   font-weight: 700;
-  max-width: 280px;
+  font-size : 1.50rem;
+  min-width: 500px;
 }
 
 .st-qty {
   background-color: var(--st-yellow);
   border: var(--st-border);
+  padding: 1rem 1rem;
   border-radius: 0;
+  font-size: 1.50rem;
   font-family: var(--font-body);
-  width: 110px;
+  min-width: 200px;
 }
 
 .btn-st-order {
@@ -278,8 +291,9 @@ footer a {
   border-radius: 0;
   font-family: var(--font-body);
   font-weight: 700;
+  font-size: 1.50rem;
   text-transform: uppercase;
-  padding: 0.5rem 2.5rem;
+  padding: 1rem 3rem;
 }
 
 .btn-st-order:hover {
@@ -298,6 +312,7 @@ footer a {
   margin-bottom: 0.25rem;
 }
 
+
 /* ===== Contact page ===== */
 .contact-img {
   border: var(--st-border);
@@ -306,6 +321,7 @@ footer a {
 .contact-info a {
   color: var(--st-black);
 }
+
 
 /* ===== Privacy and Terms ===== */
 .legal-page {
